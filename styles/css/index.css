@@ -261,4 +261,226 @@
     margin: 92px 0 0;
   }
 }
+
+.content {
+  padding: 80px 20px;
+}
+
+@media screen and (max-width: 1023px) {
+  .content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+
+.about {
+  padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.about__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .about__description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.about__title {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+
+@media screen and (max-width: 1240px) {
+  .about__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .about__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.about__text {
+  margin: 0;
+  padding: 0;
+  max-width: 50%;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.about__article {
+  margin: 80px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 700px;
+  z-index: 2;
+  margin: 0 -170px 0 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+}
+
+.about__quote-text {
+  margin: 0;
+  padding: 0;
+}
+
+.about__author {
+  margin: 24px 0 0;
+  padding: 0;
+  font-style: normal;
+}
+
+.about__img {
+  display: block;
+  max-width: 700px;
+}
+
+.about__img_size_l {
+  margin: 0;
+  max-width: unset;
+}
+
+.about__img_size_m {
+  margin: 0 177px 0 0;
+}
+
+.about__img_size_s {
+  margin: 0 82px 0 0;
+}
+
+.about__article {
+  margin: 80px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .about__article {
+    margin-top: 70px;
+  }
+  .about__quote {
+    max-width: 364px;
+  }
+  .about__img_size_l {
+    max-width: 66.5%;
+  }
+  .about__img_size_m {
+    margin-right: 121px;
+    width: 50%;
+  }
+  .about__img_size_s {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 40px 60px 0 0;
+    max-width: 304px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__text {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0 40px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .about__article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .about__quote {
+    margin: 20px 0 40px;
+    font-size: 20px;
+    line-height: 28px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .about__author {
+    margin-top: 20px;
+  }
+  .about__img_size_l {
+    max-width: 100%;
+    margin: 0;
+  }
+  .about__img_size_m {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .about__img_size_s {
+    width: 100%;
+    margin: 0;
+    max-width: unset;
+  }
+}
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,177 @@
+.about {
+  padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+
+&__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  &__description {
+    flex-direction: column;
+  }
+}
+
+&__title {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+
+@media screen and (max-width: 1240px) {
+  &__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+&__text {
+  margin: 0;
+  padding: 0;
+  max-width: 50%;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+&__article {
+  margin: 80px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+&__quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 700px;
+  z-index: 2;
+  margin: 0 -170px 0 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+}
+
+&__quote-text {
+  margin: 0;
+  padding: 0;
+}
+
+&__author {
+  margin: 24px 0 0;
+  padding: 0;
+  font-style: normal;
+}
+
+&__img {
+  display: block;
+  max-width: 700px;
+}
+
+&__img_size_l {
+  margin: 0;
+  max-width: unset;
+}
+
+&__img_size_m {
+  margin: 0 177px 0 0;
+}
+
+&__img_size_s {
+  margin: 0 82px 0 0;
+}
+
+&__article {
+  margin: 80px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1023px) {
+  &__article {
+    margin-top: 70px;
+  }
+
+  &__quote {
+    max-width: 364px;
+  }
+
+  &__img_size_l {
+    max-width: 66.5%;
+  }
+
+  &__img_size_m {
+    margin-right: 121px;
+    width: 50%;
+  }
+  &__img_size_s {
+    align-self: flex-start;
+    margin: 40px 60px 0 0;
+    max-width: 304px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  &__description {
+    flex-direction: column;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0 40px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__article {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__quote {
+    margin: 20px 0 40px;
+    font-size: 20px;
+    line-height: 28px;
+    order: 2;
+  }
+
+  &__author {
+    margin-top: 20px;
+  }
+
+  &__img_size_l {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  &__img_size_m {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  &__img_size_s {
+    width: 100%;
+    margin: 0;
+    max-width: unset;
+  }
+}
+}
