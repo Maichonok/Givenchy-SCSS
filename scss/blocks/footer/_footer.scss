@@ -1,6 +1,6 @@
 .footer {
   background-color: #0a0a0a;
-  color: #fff;
+  color: $white;
   padding: 40px 0;
 
 @media screen and (max-width: 767px) {
@@ -10,10 +10,10 @@
   }
 }
 
-&__container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
+// &__container {
+//   max-width: 1400px;
+//   margin: 0 auto;
+// }
 
 &__text {
   max-width: 700px;
@@ -21,7 +21,7 @@
   font-size: 20px;
   line-height: 32px;
   text-align: center;
-  color: #fff;
+  color: $white;
   margin: 0 auto 40px;
 }
 
@@ -57,18 +57,18 @@
 &__input {
   width: 592px;
   min-height: 48px;
-  border: 0.5px solid #fff;
-  background-color: #0a0a0a;
+  border: 0.5px solid $white;;
+  background-color: transparent;
   padding: 12px 24px;
   box-sizing: border-box;
-  text-align: center;
+  color: $white;
 }
 
 &__input::placeholder {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #666;
+  color: $gray;
   text-align: left;
 }
 
@@ -87,8 +87,8 @@
 &__button {
   width: 108px;
   min-height: 48px;
-  background: #fff;
-  border: 0.5px solid #fff;
+  background: $white;
+  border: 0.5px solid $white;
   box-sizing: border-box;
   font-weight: 500;
   font-size: 16px;
@@ -101,7 +101,7 @@
 
 &__button:hover {
   background: #0a0a0a;
-  color: #fff;
+  color: $white;
 }
 
 @media screen and (max-width: 767px) {
@@ -122,44 +122,45 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
+
 }
 
-&__checkbox + label {
+&__checkbox + &__checkbox-label {
   display: flex;
   gap: 8px;
 }
 
-&__checkbox + label::before {
+&__checkbox + &__checkbox-label::before {
   content: "";
   width: 20px;
   height: 20px;
-  border: 1px solid #666;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  border: 1px solid $white;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
-&__checkbox:checked + label::before {
+&__checkbox:checked + &__checkbox-label::before {
   width: 20px;
   height: 20px;
-  background-image: url("../../images/check_gray.svg");
+  background-image: url("../../images/check_white.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-&__checkbox + label:hover::before {
-  border: 1px solid #fff;
+
+&__checkbox + &__checkbox-label:hover::before {
+  border: 1px solid $gray;
 }
 
-&__checkbox:checked + label:hover::before {
-  background-image: url("../../images/check_white.svg");
+
+&__checkbox:checked + &__checkbox-label:hover::before {
+  background-image: url("../../images/check_gray.svg");
 }
+
 
 &__checkbox-label {
-  color: #fff;
+  color: $white;
   width: 668px;
   font-weight: normal;
   font-size: 16px;
@@ -187,7 +188,7 @@
   font-size: 20px;
   line-height: 32px;
   text-align: center;
-  color: #fff;
+  color: $white;
 }
 
 @media screen and (max-width: 767px) {

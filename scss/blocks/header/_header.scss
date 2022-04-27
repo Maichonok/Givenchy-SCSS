@@ -3,27 +3,21 @@
   box-sizing: border-box;
   width: 100%;
 
-  &__menu-container {
-    display: none;
-    position: absolute;
-    background-color:$menu-background;
-    height: 100vh;
-    width: 100vw;
-    z-index: 3;
-  }
-
-  &__menu-container_active {
-    display: block;
-  }
 
   &__menu {
+    display: block;
     width: 480px;
     height: 100vh;
-    background-color: $black;
-    position: absolute;
-    left: 0;
-    top:0;
+    position: fixed;
+    left: -480px;
+    top: 0;
     z-index: 3;
+    background-color:$menu-background;
+    transition: all .5s ease-out;
+  }
+
+  &__menu_active {
+    left: 0;
   }
 
   @media screen and (max-width: 767px) {
@@ -33,8 +27,8 @@
     }
   }
 
-  &__close-btn {
-    background-image: url('../../images/close-btn.svg');
+  &__menu-close-btn {
+    background-image: url('../images/close-btn.svg');
     background-size: contain;
     background-repeat: no-repeat;
     width: 48px;
@@ -45,8 +39,12 @@
     background-color: transparent;
   }
 
+  &__menu-close-btn:hover {
+    opacity: .7;
+  }
+
   @media screen and (max-width: 767px) {
-    &__close-btn {
+    &__menu-close-btn {
       width: 24px;
       height: 24px;
     }
@@ -54,7 +52,7 @@
 
   &__menu-items {
     padding: 245px 0 0 0;
-    @include ul-reset;
+    list-style: none;
   }
 
   @media screen and (max-width: 767px) {
@@ -85,6 +83,10 @@
     letter-spacing: 0.02em;
   }
 
+  &__menu-link:hover {
+    opacity: .7;
+  }
+
   &__burger-container {
     position: absolute;
     top: 20px;
@@ -96,7 +98,7 @@
   }
 
   &__burger {
-    background-image: url('../../images/burger.svg');
+    background-image: url('../images/burger.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -108,8 +110,13 @@
     background-color: transparent;
   }
 
+  &__burger:hover {
+    opacity: .7;
+  }
+
   @media screen and (max-width: 767px) {
     &__burger {
+      background-image: url('../images/burger_mobile.svg');
       width: 24px;
       height: 24px;
     }
@@ -126,28 +133,9 @@
     margin: 0 0 0 20px;
   }
 
-  // &__banner {
-  //   position: relative;
-  //   width: 700px;
-  // }
-
-  // @media screen and (max-width: 1046px) {
-  //   &__banner {
-  //     width: 486px;
-  //     height: 646px;
-  //   }
-  // }
-
-  // @media screen and (max-width: 767px) {
-  //   &__banner {
-  //     width: 320px;
-  //     height: 426px;
-  //   }
-  // }
-
 &__container {
   padding: 20px 24px;
-  background-image: url('../../images/banner.png');
+  background-image: url('../images/banner.png');
   background-size: contain;
   background-position: top 0 left 24px;
   background-repeat: no-repeat;
@@ -173,9 +161,9 @@
   &__button {
     margin: 32px 0 0 50%;
     width: 350px;
-    height: 48px;
-    background-color: $black;
-    border: 0.5px solid $black;
+    min-height: 48px;
+    background-color: $dark;
+    border: 0.5px solid $dark;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -183,17 +171,20 @@
     text-transform: uppercase;
     color: $white;
     cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
 }
 
 &__button:hover {
-  background: $white;
-  color: $black;
+  background-color: $white;
+  color: $dark;
 }
 
 @media screen and (max-width: 1300px) {
   &__container {
     min-height: 646px;
-    background-image: url('../../images/banner-tab.png');
+    background-image: url('../images/banner-tab.png');
     background-position: top 0 left 0;
   }
   &__title {
@@ -249,6 +240,10 @@
 
   &__title {
     margin: 92px 0 0;
+}
+  &__burger-title {
+  font-size: 14px;
+  line-height: 20px;
 }
 }
 }
