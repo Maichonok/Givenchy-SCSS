@@ -1,5 +1,6 @@
+const page = document.querySelector('.page');
 const aboutArticles = page.querySelectorAll('.about__article');
-aboutArticles.forEach(article => console.log(article.children))
+// aboutArticles.forEach(article => console.log(article.children))
 window.addEventListener('scroll', showTextAnimation);
 
 function showTextAnimation() {

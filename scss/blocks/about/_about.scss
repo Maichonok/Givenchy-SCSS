@@ -98,13 +98,6 @@
   margin: 0 82px 0 0;
 }
 
-&__article {
-  margin: 80px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 @media screen and (max-width: 1023px) {
   &__article {
     margin-top: 70px;
@@ -121,6 +114,7 @@
   &__img_size_m {
     margin-right: 121px;
     width: 50%;
+    margin-bottom: 43px;
   }
   &__img_size_s {
     align-self: flex-start;

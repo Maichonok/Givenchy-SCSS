@@ -1,20 +1,21 @@
 const burgerButton = document.querySelector(".header__burger");
-const menu = document.querySelector(".header__menu-container");
-const closeButton = menu.querySelector(".header__close-btn");
+const menu = document.querySelector(".header__menu");
+const closeButton = menu.querySelector(".header__menu-close-btn");
 
 menu.querySelectorAll(".header__menu-link").forEach((link) =>
   link.addEventListener("click", () => {
-    menu.classList.toggle("header__menu-container_active");
+    menu.classList.toggle("header__menu_active");
     document.body.style.overflow = "auto";
   })
 );
 
 burgerButton.addEventListener("click", () => {
-  menu.classList.toggle("header__menu-container_active");
-  document.body.style.overflow = "hidden";
+  menu.classList.toggle("header__menu_active");
+  document.body.style.overflow = "auto";
 });
 
 closeButton.addEventListener("click", () => {
-  menu.classList.toggle("header__menu-container_active");
+  menu.classList.toggle("header__menu_active");
   document.body.style.overflow = "auto";
 });
+
